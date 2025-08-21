@@ -17,7 +17,8 @@ namespace DemoDayCQRSProject.CQRS.Handlers.CategoryHandlers
             var values = await _context.Categories.FindAsync(query.CategoryId);
             return new GetCategoryByIdQueryResult
             {
-                CategoryName = values.CategoryName
+                CategoryName = values.CategoryName,
+                CategoryId = values.CategoryId
             };
         }
     }
